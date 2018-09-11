@@ -1,0 +1,8 @@
+远程开机,网络唤醒
+#wake  on  lan      #非必须操作（主版上设置）
+#ether-wake  -i  目标网卡  目标MAC地址      #实为广播，要在同一广播域（同一个网段（vlan））
+
+#获得IP  MAC地址
+ping  -c1  目标IP  > /dev/null
+arp  -n  目标IP     #arp地址解析协议
+

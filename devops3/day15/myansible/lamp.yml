@@ -1,0 +1,36 @@
+
+案例2:使用playbook
+1.  Playbook有两个play
+2.  一个play用于在webservers安装并启动httpd服务
+3.  另一个play用于在dbservers安装并启动mariadb服务
+
+---
+- name: configure web serivce
+  hosts:  webservers
+  tasks:
+    - name: install web app
+      yum:
+        name: "{{item}}"      ##变量放到""里,否则误认为是py的字典
+        state:  present       ##或lastest(最新版本)，absent(缺席的）
+      with_items:             ## 相当于一个for
+        - httpd
+        - php
+        - php-mysql
+    - name: config web service
+      service:  
+        name: httpd
+        state:  started
+        enabled:  true      #或者yes
+
+- name: configure db service
+  hosts:  dbservers
+  tasks:
+    - name: install db app
+      yum:
+        name: mariadb-server
+        state:  latest
+    - name: config db service
+      service:
+        name: mariadb
+        state:  started
+        enabled:  yes

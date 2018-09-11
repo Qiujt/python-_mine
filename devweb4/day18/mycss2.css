@@ -1,0 +1,20 @@
+a:link{
+    color: #000;
+}
+
+a:hover{
+    color: green;
+    font-size: 20px;
+}
+
+a:visited{
+    color: purple;
+}
+
+html{
+    font-size: 10px;
+}
+
+div{
+    font-size: 2rem;
+}

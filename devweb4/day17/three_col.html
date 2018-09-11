@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列布局</title>
+    <!--类似于http://www.qq.com的首页-->
+    <style>
+        .container{
+            width: 1000px;
+            margin: auto;
+        }
+        .header{
+            background: #CCC;
+            height: 100px;
+        }
+        .left{
+            background: #3098cc;
+            height: 200px;
+            width: 200px;
+
+            float: left;
+            /*将.left浮动起来  与.right拼在一行（因为div是行级）*/
+        }
+        .right {
+            background: cadetblue;
+            height: 200px;
+            width: 200px;
+            float: right;
+        }
+        .center{
+            height: 200px;
+            background: #b3894a;
+        }
+        .footer{
+            background: darkgrey;
+            /*height: 50px;*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">header</div>
+    <div class="main">
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="center">center</div>
+    </div>
+    <div class="footer">footer</div>
+</div>
+</body>
+</html>

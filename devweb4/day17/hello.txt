@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style>
+        #ppp{
+            font-size: 18px;
+        }
+        .hello{
+            color: green;
+        }
+    </style>
+    <script>
+        function login() {
+            alert('登陆成功')
+        }
+    </script>
+</head>
+<body>
+<!--html5支持<br>不加/-->
+Hello  World!<br/>  你好！<br/>
+
+<!--快捷方式：h1 Tab -->
+<h1>Hello  World!</h1>
+<h2 a name="ht2">Hello  World!</h2>
+<h6>小标题h1到h6</h6>
+<p>段落用p</p>
+<p class="hello"  id="ppp">这是一个段落</p>
+<!--空格用&nbsp;-->
+你&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好
+<!--横线用hr-->
+<hr>
+<!--显示<你好！> 小于号：&lt;  大于号：&gt;-->
+&lt;你好!&gt;
+<hr>
+Tarena&copy;
+<hr>
+<!--Tarena©版本号-->
+
+<!--文本样式-->
+<!--<b>...</b>:加粗-->
+<!--<i>...</i>:倾斜-->
+<!--<u>...</u>:下划线-->
+<!--<s>...</s>:删除线-->
+<!--<sup>...</sup>:上标-->
+<!--<b>粗体</b>文本-->
+<!--<sub>...</sub>:下标-->
+
+2<sup>2</sup><br>log<sub>2</sub>10
+<hr>
+<!--图片地址可以在本地-->
+<img src="http://photocdn.sohu.com/20160311/mp63081509_1457702783558_1_th_fv23.jpeg"
+     height="100"  width="100" alt="图片没有显示出来时，文字顶替图片显示">
+<br>
+<a href="https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gb18030&word=%C3%C0%C3%C3&fr=ala&ala=1&alatpl=adress&pos=0&hs=2&xthttps=111111"
+target="_blank">_black新窗口打开超链接;_self本窗口打开超链接  </a>
+<br>
+<a href="#ht2">跳转到标题2<a/>
+
+    <table border="1px"  bgcolor="#b8860b" cellspacing="2px">
+        <tr align="center">
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>22</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td colspan="2">a</td>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>a</td>
+        </tr>
+    </table>
+    <hr>
+    <ul>
+        <li>无序列表</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ul>
+    <!--无序type 属性值:disc,实心圆(默认); circle,空心圆; square,实心矩形-->
+    <ul type="circle">
+        <li>无序列表</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ul>
+    <!--有序type 属性值:1,数字(默认); a,小写字母; A,大写字母; i,小写罗马数字; I,大写罗马数字-->
+    <ol>
+        <li>有序列表</li>
+        <li>aaa</li>
+        <li>ccc</li>
+    </ol>
+    <ol type="I" start="2">
+        <li>有序列表</li>
+        <li>aaa</li>
+        <li>ccc</li>
+    </ol>
+
+    <ul>
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+
+        </li>
+    </ul>
+    <br>
+
+<!--今天重点from    -->
+    <form action="http://www.baidu.com/s" target="_blank">
+    查询:<input type="text"  name="wd">
+    <input type="submit" value="百度搜索">
+    </form>
+    URL：百度搜索
+
+    <!--
+    >>> import  requests
+    >>> r=requests.get('http://www.baidu.com/s' ,params={'wd':'python'})
+    >>> with open('/tmp/bd.html','wb')as fobj:
+    ...     fobj.write(r.content)
+    []#firefox /tmp/bd.html    ##等同于上面搜索python
+    -->
+
+
+
+<!--结合上面<script>   </script>定义的函数-->
+    <form action="">
+        username:<input type="text"  name="user"><br>
+        password:<input type="password" name="pwd">
+        <input type="button"  value="登陆"  onclick="login()">
+    </form>
+
+<!--文本框里面水印提示输入用户名，最大长度10个字符    -->
+    <form action="">
+        username:<input type="text" placeholder="用户名" maxlength="10">
+    </form>
+
+
+<!--单选框和复选框-->
+<!--•  单选框: <input type=“radio”/>-->
+<!--•  复选框: <input type=“checkbox” />-->
+    <form action="">
+        多项选择[复选框]：
+        <label>    <!--label 点击足球二字也可以生效-->
+            <input type="checkbox" name="ft" value="football">足球
+        </label>
+        <input type="checkbox" name="bt" value="basketball"> 篮球
+
+        <!--也可以指定id  点击乒乓球也可以生效-->
+        <input type="checkbox" name="pp" value="pingpong" id="tt">
+        <label for="tt">乒乓球</label>
+        <input type="submit">
+    </form>
+
+
+    <form action="">
+        单项选择[单选框]:
+        <input type="radio" name="此项下同时为单选，否则还是多选" value="football">足球
+        <input type="radio" name="此项下同时为单选，否则还是多选" value="basketball"> 篮球
+        <input type="radio" name="此项下同时为单选，否则还是多选" value="pingpang">乒乓球
+    </form>
+
+    <form action="">
+        选项框两种:下拉选项框和滚动列表
+        <select name="sports" id="PE">
+            <option value="football">足球</option>
+            <option value="basketball">篮球</option>
+            <option value="pingpang">乒乓球</option>
+        </select>
+        <br>
+        <textarea name="content" id="zzz" cols="30" rows="5"> </textarea>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
+

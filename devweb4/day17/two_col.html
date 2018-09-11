@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局</title>
+    <style>
+        .container{
+            width: 1600px;
+            margin: auto;
+        }
+        .header{
+            background: #CCC;
+            height: 100px;
+        }
+        .left{
+            background: #3098cc;
+            height: 200px;
+            width: 200px;
+
+            float: left;
+            /*将.left浮动起来  与.right拼在一行（因为div是行级）*/
+        }
+        .right{
+            background: cadetblue;
+            height: 200px;
+
+            margin-left: 200px;
+            /*左边200像素宽度不使用此底色*/
+        }
+        .footer{
+            background: darkgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">header</div>
+    <div class="main">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+</div>
+</body>
+</html>

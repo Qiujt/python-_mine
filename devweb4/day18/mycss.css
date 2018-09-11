@@ -1,0 +1,40 @@
+body{
+    background: silver;
+    color: blue;
+}
+
+hr{
+    color: #FF0000;
+}
+
+p{
+    font-size: 22px;
+}
+
+.warning{
+    font-weight: bold;
+}
+
+.important{
+    color: brown;
+}
+
+h2.warning{
+    /*表示warning里面的一个特例h2*/
+    color: yellow;
+}
+
+p .myclass{
+    /*p 与warning之间有空格，表示p里面的myclass用这属性*/
+    /*例如：<p> this is <span class="myclass">a test</span></p>*/
+    color:green;
+}
+
+p,.myclass{
+    /*,表示或者，p 或者是myclass都要改变属性*/
+    font-size: 30px;
+}
+
+#myh3{
+    font-size: 30px;
+}

@@ -1,0 +1,19 @@
+GET和POST这两种方法提供了HTTP基本的“读”和“写”操作
+–  GET
+–  POST
+请求获取Request-URI所标识的资源
+在Request-URI所标识的资源后附加新的数据
+
+
+
+GET请求
+在浏览器的地址栏中输入网址的方式访问网页时,浏览器采用GET方法,现在默认使用的协议版本是1.1
+http      ://       www.baidu.com        /
+协议部分    分隔符     目标域名           请求的资源
+
+命令行执行：
+# telnet www.baidu.com 80
+GET / HTTP/1.1
+HOST: www.baidu.com
+回车
+

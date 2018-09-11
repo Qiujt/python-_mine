@@ -1,0 +1,6 @@
+.myclass{
+    width: 200px;
+    background: pink;
+    overflow: scroll;   /*内容没有空格（不自动换行），防止溢出*/
+    /*overflow: hidden;*/
+}

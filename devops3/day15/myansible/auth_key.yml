@@ -16,8 +16,8 @@
       dest: /etc/yum.repos.d/                 #要远程配置的目录
 
 
-执行playbook
-•  检查语法
-[root@bogon	myansi]#	ansible-playbook	--syntax-check	auth_key.yml
-•  执行
-[root@bogon	myansi]#	ansible-playbook	auth_key.yml	-k(交互密码)
+#执行playbook
+#•  检查语法
+#[root@bogon	myansi]#	ansible-playbook	--syntax-check	auth_key.yml
+#•  执行
+#[root@bogon	myansi]#	ansible-playbook	auth_key.yml	-k(交互密码)

@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 import json
 
 engine = create_engine(
-    'sqlite:////root/db.sqlite3',
+    'sqlite:////root/python/python_mine/devweb4/ansible_project/myansible/db.sqlite3',
     encoding='utf8'
 )
 Base = declarative_base()
